@@ -1,0 +1,19 @@
+
+# Plugin descriptor file required for Bukkit/Spigot/Paper plugins
+name: MollyEssentials
+version: '${project.version}'
+main: org.noble.mollyessentials.MollyEssentials
+api-version: '1.20'
+author: noble
+permissions:
+  mollyessentials.chatbot.response:
+    description: Allows a player to receive responses from the chatbot
+    default: true
+
+commands:
+  color:
+    description: Open a writable book with the color codes.
+    usage: /<command>
+  hidescore:
+    description: f
+    usage: /<command>

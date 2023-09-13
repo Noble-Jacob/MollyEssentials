@@ -1,0 +1,15 @@
+# Configuration file for MollyEssentials
+# Modify the text that will be displayed to players in a writable book
+
+bookText: 'This is the default text for the writable book. Edit me in the config.yml!'
+chatbot-responses:
+  hi:
+    message: "&aHello %player_name%! How can I assist you today?"
+    delay: 10
+  hello:
+    message: "&aHello %player_name%! How can I assist you today?"
+    delay: 10
+  bye:
+    message: "&cGoodbye %player_name%! Have a great day!"
+    delay: 10
+chatbot-permission: "mollyessentials.chatbot.response"

@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="MollyEssentials:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/MollyEssentials_jar</output-path>
+    <root id="archive" name="MollyEssentials.jar">
+      <element id="module-output" name="MollyEssentials" />
+    </root>
+  </artifact>
+</component>
