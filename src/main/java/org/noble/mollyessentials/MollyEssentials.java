@@ -8,6 +8,8 @@ import org.bukkit.plugin.java.JavaPlugin;
 import org.noble.mollyessentials.book.BookHandler;
 import org.noble.mollyessentials.chat.ChatBotListener;
 import org.noble.mollyessentials.chat.ChatHandler;
+import org.noble.mollyessentials.commands.ServerMessageCommand;
+import org.noble.mollyessentials.listener.VoteListener;
 
 public class MollyEssentials extends JavaPlugin implements CommandExecutor {
     private final BookHandler bookHandler = new BookHandler(this);
@@ -19,7 +21,12 @@ public class MollyEssentials extends JavaPlugin implements CommandExecutor {
         // Register the command
         this.getCommand("color").setExecutor(this);
         this.getServer().getPluginManager().registerEvents(new ChatHandler(), this);
+        this.getCommand("servermsg").setExecutor(new ServerMessageCommand());
+        getServer().getPluginManager().registerEvents(new VoteListener(), this);
+
         getServer().getPluginManager().registerEvents(new ChatBotListener(this), this);
+
+
 
 
         // Load the default configuration

@@ -9,6 +9,9 @@ permissions:
   mollyessentials.chatbot.response:
     description: Allows a player to receive responses from the chatbot
     default: true
+  mollyessentials.servermsg:
+    description: Allows the user to send server messages to players.
+    default: op
 
 commands:
   color:
@@ -17,3 +20,7 @@ commands:
   hidescore:
     description: f
     usage: /<command>
+  servermsg:
+    description: Sends a message to a specific player.
+    usage: /<command> <player> <message>
+    permission: mollyessentials.servermsg
