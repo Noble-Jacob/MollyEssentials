@@ -12,6 +12,7 @@ import java.io.OutputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.Random;
+import java.util.UUID;
 
 public class VoteListener implements Listener {
 
@@ -57,10 +58,11 @@ public class VoteListener implements Listener {
             String uuid = new JSONObject(result.toString()).getString("id");
             return uuid;
         } catch (Exception e) {
-            e.printStackTrace();
-            return null;
+            // Generate UUID from player's name for cracked players
+            return UUID.nameUUIDFromBytes(playerName.getBytes()).toString().replace("-", "");
         }
     }
+
 
     private void sendWebhook(String url, String playerName, String content) {
         try {
